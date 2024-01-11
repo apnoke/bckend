@@ -1,4 +1,4 @@
-import express from 'express';
+
 import {connect} from './db.js'
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -13,6 +13,7 @@ import morgan from 'morgan';
 // import { bookingRouter } from './routes/bookingRoute.js';
 // import { adminRoute } from './routes/adminRoute.js';
 // import { vehicleRouter } from './routes/vehicleRouter.js';
+import express from 'express';
 const app = express();
 
 const port = process.env.PORT
