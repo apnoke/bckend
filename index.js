@@ -1,6 +1,8 @@
 import express from 'express';
 import {connect} from './db.js'
 import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config();
 import bodyParser from 'body-parser';
 import {router as authRouter} from './routes/authRoute.js'
 import { parkingRouter } from './routes/productRoute.js';
@@ -57,7 +59,6 @@ app.get('/hello2', (req, res) => {
     res.send('Hello2, Express!');
   });
 
-
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
