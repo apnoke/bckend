@@ -1,6 +1,6 @@
 import { User } from "../models/userModel.js";
 import { Parking } from "../models/parkingModel.js";
-import { Check} from "../models/CheckModel.js";
+import { Check} from "../models/checkModel.js";
 import { Side } from "../models/sideBar.js";
 import { Define} from "../models/definedModel.js";
 
