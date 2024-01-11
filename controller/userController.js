@@ -1,7 +1,9 @@
 import { User } from "../models/userModel.js";
 import { Parking } from "../models/parkingModel.js";
+import { Check} from "../models/CheckModel.js";
 import { Side } from "../models/sideBar.js";
 import { Define} from "../models/definedModel.js";
+
 
 import asyncHandler from "express-async-handler";
 import { generateToken } from "../config/jwtTokens.js";
