@@ -5,17 +5,17 @@ import dotenv from 'dotenv';
 dotenv.config();
 import bodyParser from 'body-parser';
 import {router as authRouter} from './routes/authRoute.js'
-import { parkingRouter } from './routes/productRoute.js';
-import { cityRouter } from './routes/cityRoute.js';
+// import { parkingRouter } from './routes/productRoute.js';
+// import { cityRouter } from './routes/cityRoute.js';
 import cookieParser from 'cookie-parser';
 import { notFound, errorHandler } from './middlewares/errorHandler.js';
 import morgan from 'morgan';
-import { bookingRouter } from './routes/bookingRoute.js';
-import { adminRoute } from './routes/adminRoute.js';
-import { vehicleRouter } from './routes/vehicleRouter.js';
+// import { bookingRouter } from './routes/bookingRoute.js';
+// import { adminRoute } from './routes/adminRoute.js';
+// import { vehicleRouter } from './routes/vehicleRouter.js';
 const app = express();
 
-const port = 3002;
+const port = process.env.PORT
 
 
 // const corsOptions = {
@@ -35,12 +35,12 @@ connect();
 
 
 app.use("/api/user", authRouter);
-app.use("/api/vehicle", vehicleRouter);
+// app.use("/api/vehicle", vehicleRouter);
 
-app.use("/api/parking", parkingRouter);
-app.use("/api/city", cityRouter);
-app.use("/api/booking", bookingRouter);
-app.use("/api/admin", adminRoute);
+// app.use("/api/parking", parkingRouter);
+// app.use("/api/city", cityRouter);
+// app.use("/api/booking", bookingRouter);
+// app.use("/api/admin", adminRoute);
 
 
 
@@ -59,6 +59,6 @@ app.get('/hello2', (req, res) => {
     res.send('Hello2, Express!');
   });
 
-app.listen(process.env.PORT || port, () => {
+app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
