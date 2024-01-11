@@ -5,14 +5,14 @@ import dotenv from 'dotenv';
 dotenv.config();
 import bodyParser from 'body-parser';
 import {router as authRouter} from './routes/authRoute.js'
-// import { parkingRouter } from './routes/productRoute.js';
-// import { cityRouter } from './routes/cityRoute.js';
+import { parkingRouter } from './routes/productRoute.js';
+import { cityRouter } from './routes/cityRoute.js';
 import cookieParser from 'cookie-parser';
 import { notFound, errorHandler } from './middlewares/errorHandler.js';
 import morgan from 'morgan';
-// import { bookingRouter } from './routes/bookingRoute.js';
-// import { adminRoute } from './routes/adminRoute.js';
-// import { vehicleRouter } from './routes/vehicleRouter.js';
+import { bookingRouter } from './routes/bookingRoute.js';
+import { adminRoute } from './routes/adminRoute.js';
+import { vehicleRouter } from './routes/vehicleRouter.js';
 import express from 'express';
 const app = express();
 
